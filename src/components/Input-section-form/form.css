@@ -1,0 +1,33 @@
+.input-form {
+	--extra-decor-box-gap: 0.5em;
+	--extra-decor-box-gap-half: calc(var(--extra-decor-box-gap) / 2);
+	position: relative;
+}
+.input-form::before {
+	content: "";
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 10em;
+	border: 0.1em solid var(--todo-input-decor-box-border-clr);
+	top: 50%;
+	left: calc(var(--primary-gap-half) + var(--extra-decor-box-gap-half));
+	transform: translateY(-50%);
+}
+.todo-input {
+	background-color: var(--todo-input-bg-clr);
+	font-size: 1rem;
+	font-family: inherit;
+	padding: 1.2em var(--primary-gap-2x);
+	padding-left: calc(var(--primary-gap-2x) + var(--extra-decor-box-gap));
+	width: 100%;
+	border: 0;
+	border-radius: var(--primary-bdr-rad);
+	color: var(--todo-input-clr);
+}
+.todo-input::placeholder {
+	color: var(--todo-input-placeholder-clr);
+}
+.todo-input:focus-visible {
+	outline: 0.5em solid var(--todo-input-focus-outline-clr);
+}

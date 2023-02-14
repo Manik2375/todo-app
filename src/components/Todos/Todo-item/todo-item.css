@@ -1,0 +1,93 @@
+.todo-item {
+	display: flex;
+	align-items: center;
+	gap: var(--primary-gap);
+	padding: 1em var(--primary-gap);
+	cursor: pointer;
+}
+.todo-item:not(:last-child) {
+	border-bottom: 0.1em solid var(--todo-item-bdr-clr);
+}
+
+.todo-item-checkbox-label {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 1.75em;
+	height: 1.75em;
+	border-radius: 5em;
+	border: 0.1em solid var(--todo-item-checkbox-border-clr);
+	cursor: pointer;
+}
+.todo-item__checkbox-container[data-checked="true"] > label {
+	background: var(--todo-item-checkbox-bg);
+	border: 0;
+}
+.todo-item-checkbox-label:hover,
+.todo-item-checkbox-label:focus-within {
+	border-color: var(--todo-item-checkbox-hover-border-clr);
+}
+.todo-item__checkbox-container[data-checked="true"] > label:is(:hover, :focus-within) {
+	outline: 0.5em solid var(--todo-item-checkbox-hover-outline-clr);
+}
+.todo-item-checkbox-label__img {
+	width: 0.75em;
+	height: 0.75em;
+	user-select: none;
+	opacity: 0;
+}
+.todo-item__checkbox-container[data-checked="true"] .todo-item-checkbox-label__img {
+	opacity: 1;
+}
+.todo-item-checkbox {
+	position: absolute;
+	top: -999vh;
+	left: -999vw;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.todo-item__todo-text {
+	font-weight: 700;
+	color: var(--todo-item-txt-clr);
+	line-height: 1.6;
+	letter-spacing: .05rem;
+}
+.todo-item__checkbox-container[data-checked="true"] + .todo-item__todo-text {
+	text-decoration: line-through;
+	color: var(--todo-item-text-done-clr);
+}
+.remove-btn-container {
+	margin-left: auto;
+	flex-shrink: 0;
+}
+.remove-btn-container__btn {
+	padding: 0.5em;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 0.5em;
+	user-select: none;
+	transition: none;
+}
+.remove-btn-container__btn:hover,
+.remove-btn-container__btn:focus-visible {
+	outline-color: var(--action-btn-focus-outline-clr);
+	background: var(--remove-btn-hover-bg-clr);
+}
+
+.remove-btn-container__btn > img {
+	width: 1.25em;
+	height: 1.25em;
+	vertical-align: middle;
+}
+@media screen and (min-width: 45em) {
+	.remove-btn-container {
+		opacity: 0;
+	}
+	.todo-item:hover > .remove-btn-container,
+	.todo-item:focus-within > .remove-btn-container {
+		opacity: 1;
+	}
+}

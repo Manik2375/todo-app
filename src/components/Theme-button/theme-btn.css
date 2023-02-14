@@ -1,0 +1,19 @@
+.theme-btn {
+	height: max-content;
+	padding: 0.5em;
+	border: 0;
+	border-radius: 0.5em;
+	background-color: transparent;
+	cursor: pointer;
+	user-select: none;
+	transition: none;
+}
+.theme-btn:hover,
+.theme-btn:focus-visible {
+	background-color: var(--theme-btn-hover-bg-clr);
+	outline: 0.25em solid var(--action-btn-focus-outline-clr);
+}
+.theme-btn__img {
+	width: 1.75em;
+	height: 1.75em;
+}
