@@ -2,6 +2,9 @@
 	--extra-decor-box-gap: 0.5em;
 	--extra-decor-box-gap-half: calc(var(--extra-decor-box-gap) / 2);
 	position: relative;
+	display: flex;
+	align-items: center;
+	gap: var(--primary-gap-half);
 }
 .input-form::before {
 	content: "";
@@ -29,5 +32,21 @@
 	color: var(--todo-input-placeholder-clr);
 }
 .todo-input:focus-visible {
+	outline: 0.5em solid var(--todo-input-focus-outline-clr);
+}
+
+.todo-submit-btn {
+	 height: 100%;
+	 padding-inline: var(--primary-gap-half);
+	 background-color: var(--todo-submit-btn-bg-clr);
+	 border: .25em solid  var(--todo-submit-btn-bdr-clr);
+	 border-radius: var(--primary-bdr-rad);
+	 cursor: pointer;
+	 font-size: 1rem;
+}
+.todo-submit-btn:hover {
+	background-color: var(--todo-submit-btn-hover-bg-clr);
+}
+.todo-submit-btn:focus-visible {
 	outline: 0.5em solid var(--todo-input-focus-outline-clr);
 }

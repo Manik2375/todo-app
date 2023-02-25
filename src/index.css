@@ -25,6 +25,9 @@ html {
 	--todo-input-placeholder-clr: hsl(233, 11%, 84%);
 	--todo-input-clr: hsl(235, 19%, 35%);
 	--todo-input-decor-box-border-clr: hsl(233, 11%, 84%);
+	--todo-submit-btn-bg-clr: hsl(0, 0%, 100%);
+	--todo-submit-btn-bdr-clr: hsl(0, 0%, 100%);
+	--todo-submit-btn-hover-bg-clr: hsl(0, 0%, 81%);
 
 	--todo-container-bg: hsl(0, 0%, 100%);
 	--todo-container-box-shadow-clr: rgb(229 228 234);
@@ -66,6 +69,9 @@ html.theme_dark {
 	--todo-input-placeholder-clr: hsl(234, 11%, 52%);
 	--todo-input-clr: hsl(234, 39%, 85%);
 	--todo-input-decor-box-border-clr: hsl(233, 14%, 35%);
+	--todo-submit-btn-bg-clr: hsl(235, 24%, 19%);
+	--todo-submit-btn-bdr-clr: hsl(235, 24%, 19%);
+	--todo-submit-btn-hover-bg-clr: hsl(235, 21%, 11%);
 
 	--todo-container-bg: hsl(235, 24%, 19%);
 	--todo-container-box-shadow-clr: hsl(240, 21%, 7%);
@@ -101,7 +107,8 @@ html.theme_dark {
 	padding: 0;
 	box-sizing: border-box;
 	transition: color var(--theme-switch-time) linear,
-		background-color var(--theme-switch-time) linear, box-shadow var(--theme-switch-time) linear;
+		background-color var(--theme-switch-time) linear, box-shadow var(--theme-switch-time) linear,
+		border var(--theme-switch-time) linear;
 }
 
 body {
