@@ -23,7 +23,7 @@ function ThemeButton() {
 	const [theme, setTheme] = useState(defaultTheme);
 
 	const changeTheme = () => {
-		if (theme == "light") {
+		if (theme === "light") {
 			setTheme("dark");
 			app.classList.add("theme_dark");
 			localStorage.setItem("theme", "dark");
@@ -35,7 +35,11 @@ function ThemeButton() {
 	};
 
 	return (
-		<button className="theme-btn" title="Change app's theme" onClick={changeTheme}>
+		<button
+			className="theme-btn"
+			title={theme === "light" ? "Change theme to dark" : "Change theme to light"}
+			onClick={changeTheme}
+		>
 			<img src={theme == "light" ? iconMoon : iconSun} alt="" className="theme-btn__img" />
 		</button>
 	);

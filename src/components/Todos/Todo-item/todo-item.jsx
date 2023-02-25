@@ -26,14 +26,15 @@ function TodoItem({ todo, deleteTodo, changeTodoStatus }) {
 }
 
 function TodoCheckbox({ completed, changeStatus }) {
+	const todoLabel = completed ? "Mark todo as incomplete" : "Mark todo as complete";
 	return (
 		<div className="todo-item__checkbox-container" data-checked={completed}>
-			<label className="todo-item-checkbox-label" title="Mark todo as done">
+			<label className="todo-item-checkbox-label" title={todoLabel}>
 				<img src={iconCheck} className="todo-item-checkbox-label__img" alt="" />
 				<input
 					type="checkbox"
 					className="todo-item-checkbox"
-					aria-label="Mark todo as done"
+					aria-label={todoLabel}
 					value="todo-done"
 					checked={completed}
 					onChange={changeStatus}

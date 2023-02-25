@@ -23,7 +23,9 @@ function Form({ addTodo }) {
 					setTodoText(e.target.value);
 				}}
 			/>
-		<button type="submit" className="todo-submit-btn">📌</button>
+			<button type="submit" className="todo-submit-btn" title="Add todo in list">
+				📌
+			</button>
 		</form>
 	);
 }

@@ -23,6 +23,15 @@
 .todo-item__checkbox-container[data-checked="true"] > label {
 	background: var(--todo-item-checkbox-bg);
 	border: 0;
+	animation: pop-up 200ms linear forwards;
+}
+@keyframes pop-up {
+	75% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 .todo-item-checkbox-label:hover,
 .todo-item-checkbox-label:focus-within {
@@ -52,7 +61,7 @@
 	font-weight: 700;
 	color: var(--todo-item-txt-clr);
 	line-height: 1.6;
-	letter-spacing: .05rem;
+	letter-spacing: 0.05rem;
 }
 .todo-item__checkbox-container[data-checked="true"] + .todo-item__todo-text {
 	text-decoration: line-through;
